@@ -1,0 +1,11 @@
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        c = 0
+        n = len(nums)
+        while c < n:
+            if nums[c] == 0:
+                nums.pop(c)
+                nums.append(0)
+                n -= 1      
+            else:
+                c += 1
