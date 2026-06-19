@@ -5,3 +5,4 @@ class Solution:
             rem=target-nums[i]
             if rem in d:
                 return [d[rem],i]
+            d[nums[i]] = i
