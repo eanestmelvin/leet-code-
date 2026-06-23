@@ -1,0 +1,15 @@
+class Solution:
+    def backtrack(self,nums,cur,res):
+        if len(cur)==len(nums):
+            res.append(cur[:])
+            return
+        for i in nums:
+            if i in cur:
+                continue
+                cur.append(i)
+                self.backtrack(nums,cur,res)
+                cur.pop()
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        res=[]
+        self.backtrack(nums,[],res)
+        return res
